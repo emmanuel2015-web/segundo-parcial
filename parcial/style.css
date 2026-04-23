@@ -1,0 +1,126 @@
+/* RESET Y GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body { background-color: #f0f2f5; color: #333; }
+
+/* NAVEGACIÓN (FLEXBOX) */
+header {
+    background: #000;
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 { font-size: 1.5rem; letter-spacing: 2px; color: #ff3e3e; }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav a:hover { color: #ff3e3e; }
+
+/* LAYOUT DE PAGINAS (GRID) */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+/* LANDING / HERO (FLEXBOX) */
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=1000') center/cover;
+    color: white;
+}
+
+/* GRILLA DE PRODUCTOS (GRID) */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card img { width: 100%; border-radius: 5px; margin-bottom: 15px; }
+
+/* ADMIN DASHBOARD (GRID) */
+.admin-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+@media (min-width: 992px) {
+    .admin-layout { grid-template-columns: 1.2fr 0.8fr; }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+th { background: #333; color: white; }
+
+/* FORMULARIOS */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #ff3e3e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
