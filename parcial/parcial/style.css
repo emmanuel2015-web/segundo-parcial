@@ -1,0 +1,113 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body { background-color: #f0f2f5; color: #333; line-height: 1.6; }
+
+/* NAVEGACIÓN (FLEXBOX) */
+header {
+    background: #1a1a1a;
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+header h1 { color: #ff4d4d; letter-spacing: 2px; }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover { color: #ff4d4d; }
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+/* GRILLA DE PRODUCTOS (GRID) */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; }
+
+/* TABLAS ADMIN (GRID LAYOUT) */
+.admin-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+@media (min-width: 900px) {
+    .admin-main { grid-template-columns: 1fr 1fr; }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+th { background: #ff4d4d; color: white; }
+
+/* FORMULARIOS */
+.form-container {
+    background: white;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.form-group { margin-bottom: 15px; display: flex; flex-direction: column; }
+.form-group label { font-weight: bold; margin-bottom: 5px; }
+.form-group input, .form-group select { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+
+.btn {
+    background: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
